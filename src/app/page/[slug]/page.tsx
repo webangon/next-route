@@ -49,7 +49,7 @@ export default async function Page({ params }: {
     <Suspense fallback={<Loading />}>
       {xyz.map((item) => {
         const content = item.content;
-        return(
+        return( 
             <>
           <div dangerouslySetInnerHTML={{__html: content}}></div>            
             </>
