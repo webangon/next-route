@@ -41,7 +41,7 @@ export default async function Page() {
     <Suspense fallback={<Loading />}>
       {xyz.map((item:any) => {
         return(
-          <h3><Link key={item.id} href={`blog/${item.node.slug}`}>{item.node.title}</Link></h3>
+          <h3 key={item.id}><Link href={`blog/${item.node.slug}`}>{item.node.title}</Link></h3>
         );
       })}
 </Suspense>

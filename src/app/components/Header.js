@@ -53,13 +53,13 @@ export default async function Header() {
             if (item.post_parent === 0) {
               return (
                 <>
-                  <li><Link href={url}>{title}</Link>
+                  <li key={item.id}><Link href={url}>{title}</Link>
                     <ul className={sub_class}>
                       {childItems && childItems.map(childItem => {
                         const childName = childItem.title;
                         const childUrl = childItem.url.replace("http://edd.test", "");
                         return (
-                          <li><Link key={childItem.id} href={childUrl}>{childName}</Link></li>
+                          <li key={childItem.id}><Link href={childUrl}>{childName}</Link></li>
                         )
                       })}
                     </ul>
@@ -68,7 +68,7 @@ export default async function Header() {
               )
             } else {
               return (
-                <li><Link key={item.id} href={url}>{title}</Link></li>
+                <li key={item.id}><Link href={url}>{title}</Link></li>
               )
             }
 
