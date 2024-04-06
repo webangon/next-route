@@ -1,0 +1,123 @@
+@font-face{
+    font-family:Proxima Nova;
+    src:local('ProximaNova-Regular'),
+        url('fonts/ProximaNova-Regular.woff2') format('woff2');
+    font-weight:400;
+    font-style:normal;
+    font-display:swap;
+}
+@font-face{
+    font-family:Proxima Nova;
+    src:local('ProximaNova-Semibold'),
+        url('fonts/ProximaNova-Semibold.woff2') format('woff2');
+    font-weight:600;
+    font-style:normal;
+    font-display:swap;
+}
+@font-face{
+    font-family:Proxima Nova;
+    src:local('ProximaNova-Bold'),
+        url('fonts/ProximaNova-Bold.woff2') format('woff2');
+    font-weight:700;
+    font-style:normal;
+    font-display:swap;
+}
+@font-face{
+    font-family:'D-DIN Condensed';
+    src:local('D-DINCondensed-Bold'),
+        url('fonts/D-DINCondensed-Bold.woff2') format('woff2');
+    font-weight:700;
+    font-style:normal;
+    font-display:swap;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family:Proxima Nova;
+    line-height:1.208333;/*29px*/
+    font-size:1.500em;/*24px*/
+    color:#636363;
+}
+
+.header {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px 0 rgba(0,0,0,.1);
+    position: relative;
+    z-index: 9999;
+}
+.header .container {
+    max-width: 1810px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.container {
+    width: 100%;
+    max-width: 1110px;
+    position: relative;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 1;
+}
+#logo {
+    width: 10.572916666667vw;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navigation .menu {
+    overflow: inherit;
+    align-items: flex-start;
+    display: flex;
+}
+.navigation .sub-menu {
+    width: 416px;
+    position: absolute;
+    visibility: hidden;
+    background: #ee7001;
+    transition: all .5s ease;
+    transform: translate(-50%);
+    border-radius: 6px;
+    margin-left: 60px;
+    z-index: -9;
+    opacity: 0;
+    top: 150px;
+    left: 50%;
+}
+.navigation li:hover .sub-menu {
+    visibility: visible;
+    z-index: 99;
+    opacity: 1;
+    top: 100%;
+}
+.navigation .menu > li a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: #0066a0;
+}
+
+.navigation .menu > li a, #sidebarMenu .menu > li a {
+    padding: 40px 80px 36px 50px;
+}
+.navigation .sub-menu li, #sidebarMenu .sub-menu li {
+    width: 100%;
+    line-height: 20px;
+    border-top: 1px solid #bb5800;
+    text-transform: capitalize;
+    position: relative;
+}
+.navigation .sub-menu li a:hover {
+    background-color: #0066a0;
+    color: #fff;
+}
