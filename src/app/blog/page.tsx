@@ -15,7 +15,7 @@ export default async function Page() {
             }
         }    
     `;
-    const res = await fetch('http://edd.test/graphql', {
+    const res = await fetch('https://webangon.com/nextwp/graphql', {
         method: "POST",
         cache: 'no-store',
         headers:{
