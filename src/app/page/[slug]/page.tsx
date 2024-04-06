@@ -47,7 +47,7 @@ export default async function Page({ params }: {
         <>
         <Header/>
     <Suspense fallback={<Loading />}>
-      {xyz.map((item) => {
+      {xyz.map((item:any) => {
         const content = item.content;
         return( 
             <>
