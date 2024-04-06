@@ -59,7 +59,7 @@ export default async function Header() {
                         const childName = childItem.title;
                         const childUrl = childItem.url.replace("http://edd.test", "");
                         return (
-                          <li><Link href={childUrl}>{childName}</Link></li>
+                          <li><Link key={childItem.id} href={childUrl}>{childName}</Link></li>
                         )
                       })}
                     </ul>
@@ -68,7 +68,7 @@ export default async function Header() {
               )
             } else {
               return (
-                <li><Link href={url}>{title}</Link></li>
+                <li><Link key={item.id} href={url}>{title}</Link></li>
               )
             }
 
