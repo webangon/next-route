@@ -11,7 +11,7 @@ export default async function Frontpage() {
       }  
   }    
   `;
-  const res = await fetch('https://webangon.com/nextwp/graphql', {
+  const res = await fetch(process.env.LIOR_GRAPHQL, {
     method: "POST",
     cache: 'no-store',
     headers: {
