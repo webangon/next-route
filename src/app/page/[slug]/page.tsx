@@ -18,9 +18,9 @@ export default async function Page({ params }: {
             }
         }  
     }    
-    `;
+    `; 
 
-    const res = await fetch( process.env.LIOR_GRAPHQL, {
+    const res = await fetch( process.env.LIOR_GRAPHQL as string, {
         method: "POST",
         cache: 'no-store',
         headers: {
