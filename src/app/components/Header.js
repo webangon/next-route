@@ -4,7 +4,7 @@ import '../css/frontend.min.css';
 import '../css/header.css';
 
 export default async function Header() {
-  const res = await fetch('http://edd.test/wp-json/menus/v1/menus/primarymenu', { cache: 'no-store' });
+  const res = await fetch('https://webangon.com/wp-json/menus/v1/menus/primarymenu', { cache: 'no-store' });
   const data = await res.json();
 
   return (
@@ -48,7 +48,7 @@ export default async function Header() {
           {data.items.map((item) => {
             const title = item.title;
             const childItems = item.child_items;
-            const url = item.url.replace("http://edd.test", "");
+            const url = item.url.replace("https://webangon.com", "");
             const sub_class = childItems ? "sub-menu" : "no-sub";
             if (item.post_parent === 0) {
               return (
@@ -57,7 +57,7 @@ export default async function Header() {
                     <ul className={sub_class}>
                       {childItems && childItems.map(childItem => {
                         const childName = childItem.title;
-                        const childUrl = childItem.url.replace("http://edd.test", "");
+                        const childUrl = childItem.url.replace("https://webangon.com", "");
                         return (
                           <li key={childItem.id}><Link href={childUrl}>{childName}</Link></li>
                         )
