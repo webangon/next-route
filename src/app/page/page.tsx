@@ -15,7 +15,7 @@ export default async function Page() {
             }
         }    
     `;
-    const res = await fetch(process.env.LIOR_GRAPHQL as string, {
+    const res = await fetch(process.env.LIOR_GRAPHQL!, {
         method: "POST",
         cache: 'no-store',
         headers:{
