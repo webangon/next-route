@@ -1,8 +1,13 @@
 import { Metadata } from 'next'
+import { Suspense } from "react";
+import Loading from "../.././loading";
+import Footer from '../.././components/Footer'
+import Script from 'next/script'
 import Header from '../.././components/Header'
+import InnerHTML from 'dangerously-set-html-content'
 
 export const metadata: Metadata = {
-  title: 'Courses',
+    title: 'Courses',
 }
 
 export default async function Page({ params }: {
@@ -18,9 +23,9 @@ export default async function Page({ params }: {
             }
         }  
     }    
-    `; 
+    `;
 
-    const res = await fetch( process.env.LIOR_GRAPHQL!, {
+    const res = await fetch(process.env.LIOR_GRAPHQL!, {
         method: "POST",
         cache: 'no-store',
         headers: {
@@ -40,18 +45,20 @@ export default async function Page({ params }: {
         }
     )
     const xyz = res.data.pages.nodes;
-    return(
-        <>    
-        <Header/>
-      {xyz.map((item:any) => {
-        const content = item.content;
-        return( 
-            <>
-          <div dangerouslySetInnerHTML={{__html: content}}></div>            
-            </>
-        );
-      })}
-      
+    return ( 
+        <>
+            <Header />
+            <Suspense fallback={<Loading />}>
+            {xyz.map((item: any) => {
+                const content = item.content;
+                return (
+                    <>
+                        <InnerHTML html={content} />
+                    </>
+                );
+            })}
+            </Suspense>
+            <Footer/> 
         </>
-    ) 
+    )
 }
