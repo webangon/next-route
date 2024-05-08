@@ -45,7 +45,11 @@ export default function Header() {
           <Image data-toggle-sidebar="sidebar1" className="mobile-tap" src="/img/mobile-tap.png" alt="Better Stack" width={50} height={50}/>
         </div>    
         <Sidebar/>    
-      </header>     
+      </header>
+      <Script src="/js/splide.min.js"></Script>
+      <Script src="/js/glightbox.js"></Script>
+      <link href="/css/glightbox.css" rel="stylesheet"></link>
+      <link href="/css/splide.min.css" rel="stylesheet"></link>      
     </>
   )
 }
