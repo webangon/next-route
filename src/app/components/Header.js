@@ -14,7 +14,7 @@ export default function Header() {
     <>
       <header className='header'>
         <div className='container'>
-          <Link id="logo" href="http://localhost:3000/" aria-label="Logo">
+          <Link id="logo" href="https://next-route-seven.vercel.app/" aria-label="Logo">
             <Image
             className="mx-auto mt-2"
             src="/img/logo.png"
@@ -25,7 +25,7 @@ export default function Header() {
             </Link>
           <nav className='navigation'>
             <ul className="menu">
-                <li><Link href="http://localhost:3000/">Home</Link>
+                <li><Link href="https://next-route-seven.vercel.app/">Home</Link>
                 </li>
                 <li><Link href="/page/brand-details/">Brand</Link>
                 </li>          
