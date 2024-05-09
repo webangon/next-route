@@ -189,6 +189,21 @@ body.sidebar-open {
     padding-top: 40px
 }
 
+.navigation .is-parent:before{
+    width: 15px;
+    content: " ";
+    background-image: url(/img/arrow-down.png);
+    position: absolute;
+    right: -20px;
+    top: 10px;
+    height: 9px;
+    background-repeat: no-repeat;
+}
+.navigation .is-parent{
+  position:relative;
+}
+
+
 .preloader {
     position: absolute;
     left: 50%;

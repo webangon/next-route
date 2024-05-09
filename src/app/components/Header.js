@@ -14,7 +14,7 @@ export default function Header() {
     <>
       <header className='header'>
         <div className='container'>
-          <Link id="logo" href="https://next-route-seven.vercel.app/" aria-label="Logo">
+          <Link id="logo" href={`${process.env.LIOR_SITE}`} aria-label="Logo">
             <Image
             className="mx-auto mt-2"
             src="/img/logo.png"
@@ -25,17 +25,17 @@ export default function Header() {
             </Link>
           <nav className='navigation'>
             <ul className="menu">
-                <li><Link href="https://next-route-seven.vercel.app/">Home</Link>
-                </li>
-                <li><Link href="/page/brand-details/">Brand</Link>
-                </li>          
+                <li><Link href={`${process.env.LIOR_SITE}`}>Home</Link>
+                </li>         
                 <li><Link href="/page/product-detail/">Product Detail</Link>
                 </li>   
                 <li><Link href="/page/pdf-download/">PDF Download</Link>
                 </li>                    
-                <li><a href="#">Grants</a>
+                <li className="is-parent"><a href="#">Brands</a>
                     <ul className="sub-menu">
-                        <li><Link href="/page/all-courses-bundle">All Courses Bundle</Link></li>
+                    <li><Link href="/page/open-path-brand/">Open Path</Link></li> 
+                    <li><Link href="/page/butterflymx-brand/">Butterfly MX</Link></li> 
+                    <li><Link href="/page/ict-brand/">ICT</Link></li> 
                     </ul>
                 </li>                                             
             </ul>
