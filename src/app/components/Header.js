@@ -46,8 +46,8 @@ export default function Header() {
         </div>    
         <Sidebar/>    
       </header>
-      <script src="/js/splide.min.js"></script>
-      <script src="/js/glightbox.js"></script>
+      <Script src="/js/splide.min.js"></Script>
+      <Script src="/js/glightbox.js"></Script>
       <link href="/css/glightbox.css" rel="stylesheet"></link>
       <link href="/css/splide.min.css" rel="stylesheet"></link>      
     </>
