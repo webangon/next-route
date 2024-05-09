@@ -27,7 +27,7 @@ export default function Sidebar() {
                 this.parentNode.nextSibling.classList.toggle('show-sub')
             }
             
-        })
+        }) 
 
       }, []);
 

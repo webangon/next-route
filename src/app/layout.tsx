@@ -3,6 +3,10 @@ export const metadata: Metadata = {
   title: "App Name",
   description: "App Description",
   manifest:"/manifest.json",
+  robots: {
+    index: false,
+    follow: false,
+  },   
 }
 
 export default function RootLayout({
