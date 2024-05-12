@@ -61,7 +61,7 @@ if (portfolio_carousel != null) {
         640: {
             perPage: 1,
         },
-    },
+    }, 
     classes: {
             arrows: 'splide__arrows',
             arrow : 'splide__arrow_vid',
