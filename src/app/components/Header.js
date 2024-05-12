@@ -37,7 +37,9 @@ export default function Header() {
                     <li><Link href="/page/butterflymx-brand/">Butterfly MX</Link></li> 
                     <li><Link href="/page/ict-brand/">ICT</Link></li> 
                     </ul>
-                </li>                                             
+                </li>  
+                <li><Link href="#">Contact</Link>
+                </li>                                                            
             </ul>
           </nav>
           <Link className='cta' href="/"><Image src="/img/user.png" alt="Better Stack" width={29} height={28}/>Contact our Team</Link>
