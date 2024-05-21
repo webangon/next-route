@@ -197,7 +197,7 @@ body.sidebar-open {
     background-image: url(/img/arrow-down.png);
     position: absolute;
     right: -20px;
-    top: 16px;
+    top: 10px;
     height: 9px;
     background-repeat: no-repeat;
 }

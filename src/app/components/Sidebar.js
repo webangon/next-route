@@ -4,10 +4,10 @@ import { useEffect } from 'react';
 export default function Sidebar() {
 
     useEffect(() => {
-          
-        var script = document.createElement("script");  
-        script.src = '/js/script.js'; 
-        document.head.appendChild(script);    
+
+        var script = document.createElement("script");
+        script.src = '/js/script.js';
+        document.head.appendChild(script);
 
     }, []);
 
@@ -26,15 +26,15 @@ export default function Sidebar() {
                             </li>
                             <li className="is-parent"><Link href="#">Brands <span className="plus">+</span></Link>
                                 <ul className="sub-menu">
-                                    <li><Link href="/page/open-path-brand/">Open Path</Link></li>
-                                    <li><Link href="/page/butterflymx-brand/">Butterfly MX</Link></li>
+                                    <li><Link href="/page/openpath-brand/">Open Path</Link></li>
+                                    <li><Link href="/page/butterfly/">Butterfly MX</Link></li>
                                     <li><Link href="/page/ict-brand/">ICT</Link></li>
                                 </ul>
                             </li>
                         </ul>
                     </nav>
                 </div>
-            </div>           
+            </div>
         </>
     )
 }

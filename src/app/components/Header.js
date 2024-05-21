@@ -23,7 +23,7 @@ export default function Header() {
             height={58}
           />
             </Link>
-          <nav className='navigation'>
+          <nav className='navigation'> 
             <ul className="menu">
                 <li><Link href={`${process.env.LIOR_SITE}`}>Home</Link>
                 </li>         
@@ -33,8 +33,8 @@ export default function Header() {
                 </li>                    
                 <li className="is-parent"><a href="#">Brands</a>
                     <ul className="sub-menu">
-                    <li><Link href="/page/open-path-brand/">Open Path</Link></li> 
-                    <li><Link href="/page/butterflymx-brand/">Butterfly MX</Link></li> 
+                    <li><Link href="/page/openpath-brand/">Open Path</Link></li> 
+                    <li><Link href="/page/butterfly/">Butterfly MX</Link></li> 
                     <li><Link href="/page/ict-brand/">ICT</Link></li> 
                     </ul>
                 </li>  
