@@ -44,12 +44,12 @@ export default async function Page({ params }: {
             return data;
         }
     )
-    const xyz = res.data.pages.nodes;
+    const final_data = res.data.pages.nodes;
     return ( 
         <>
             <Header />
             <Suspense fallback={<Loading />}>
-            {xyz.map((item: any) => {
+            {final_data.map((item: any) => {
                 const content = item.content;
                 return (
                     <>

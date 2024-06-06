@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 import { Suspense } from "react";
 import Loading from "../.././loading";
 import Footer from '../.././components/Footer'
-import Script from 'next/script'
 import Header from '../.././components/Header'
 import InnerHTML from 'dangerously-set-html-content'
 

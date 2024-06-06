@@ -36,6 +36,7 @@ export default function Header() {
                     <li><Link href="/page/openpath-brand/">Open Path</Link></li> 
                     <li><Link href="/page/butterfly/">Butterfly MX</Link></li> 
                     <li><Link href="/page/ict-brand/">ICT</Link></li> 
+                    <li><Link href="/blog/">Blog</Link></li> 
                     </ul>
                 </li>  
                 <li><Link href="#">Contact</Link>

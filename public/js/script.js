@@ -97,4 +97,16 @@ mobile_expand.forEach((item, index) => {
 
 })
 
+//******* */
 
+var next_post = document.querySelector('.blog-navigation .next')
+if (next_post != null) {
+  next_post.addEventListener('click', fetchData)
+  async function fetchData() {
+    var res = await fetch('https://webangon.com/abr/wp-json/wp/v2/uts_posts',{
+      //mode: 'no-cors'
+    })
+    const xyz =  await res.json();
+    console.log(xyz)
+  }
+}

@@ -5,9 +5,16 @@ export default function Sidebar() {
 
     useEffect(() => {
 
-        var script = document.createElement("script");
-        script.src = '/js/script.js';
-        document.head.appendChild(script);
+        const jsFiles = [
+            'https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.12.4.min.js',
+            '/js/script.js',
+        ]
+
+    jsFiles.forEach((item) => {
+        const scriptEle = document.createElement('script');
+        scriptEle.src = item;
+        document.head.appendChild(scriptEle);
+    })
 
     }, []);
 
