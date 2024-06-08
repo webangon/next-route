@@ -34,6 +34,7 @@ export default function Header() {
                 <li className="is-parent"><a href="#">Brands</a>
                     <ul className="sub-menu">
                     <li><Link href="/page/openpath-brand/">Open Path</Link></li> 
+                    <li><Link href="/page/home-2/">Home 2</Link></li> 
                     <li><Link href="/page/butterfly/">Butterfly MX</Link></li> 
                     <li><Link href="/page/ict-brand/">ICT</Link></li> 
                     <li><Link href="/blog/">Blog</Link></li> 

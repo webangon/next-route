@@ -110,3 +110,94 @@ if (next_post != null) {
     console.log(xyz)
   }
 }
+
+
+var sliderItems = document.querySelector('.sliderItems')
+if (sliderItems != null) {
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+      showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+      showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("sliderItem");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+          slideIndex = 1
+      }
+      if (n < 1) {
+          slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+  }
+}
+
+
+
+var clientSliders = document.querySelector('.clientSliders')
+if (clientSliders != null) {
+  let slideIndex1 = 1;
+  showSlides1(slideIndex1);
+  
+  function clientSlider(n) {
+      showSlides1(slideIndex1 = n);
+  }
+  
+  function showSlides1(n) {
+      let i;
+      let slides = document.getElementsByClassName("clientSlider");
+      let dots = document.getElementsByClassName("dotitm");
+      if (n > slides.length) {
+          slideIndex1 = 1
+      }
+      if (n < 1) {
+          slideIndex1 = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active1", "");
+      }
+      slides[slideIndex1 - 1].style.display = "block";
+      dots[slideIndex1 - 1].className += " active1";
+  }
+}
+
+
+
+var tabLinks = document.querySelectorAll(".tablinks");
+if (tabLinks != null) {
+  var tabContent = document.querySelectorAll(".tabcontent");
+  tabLinks.forEach(function (el) {
+      el.addEventListener("click", openTabs);
+  });
+  
+  function openTabs(el) {
+      var btn = el.currentTarget;
+      var electronic = btn.dataset.electronic;
+      tabContent.forEach(function (el) {
+          el.classList.remove("active");
+      });
+      tabLinks.forEach(function (el) {
+          el.classList.remove("active");
+      });
+      document.querySelector("#" + electronic).classList.add("active");
+      btn.classList.add("active");
+  }
+}
+
