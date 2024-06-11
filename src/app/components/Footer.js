@@ -4,74 +4,56 @@ import Link from "next/link";
 import '../css/footer.css';
 
 export default function Footer() {
-  return (
-    <>
-      <div className='footer'>
-        <div className='container'>
-          <div className='top-footer'>
-            <div className='ut-col-5'>
-              <h3>THE COMPANY</h3>
-              <ul>
-                <li><Link href="#">Our Services</Link></li>
-                <li><Link href="#">Branch Locator</Link></li>
-                <li><Link href="#">Careers</Link></li>
-              </ul>
-            </div>
-            <div className='ut-col-5'>
-              <h3>LOCATIONS</h3>
-              <ul>
-                <li><Link href="#">Ontario</Link></li>
-                <li><Link href="#">British Columbia</Link></li>
-                <li><Link href="#">Quebec</Link></li>
-              </ul>
-            </div>
-            <div className='ut-col-5'>
-              <h3>RESOURCES</h3>
-              <ul>
-                <li><Link href="#">Videos</Link></li>
-                <li><Link href="#">Request a Quote</Link></li>
-                <li><Link href="#">Product Guides</Link></li>
-                <li><Link href="#">Articles & Resources</Link></li>
-                <li><Link href="#">Training & Events</Link></li>
-              </ul>
-            </div>
-            <div className='ut-col-5'>
-              <h3>SUPPORT</h3>
-              <ul>
-                <li><Link href="#">Become a Customer</Link></li>
-                <li><Link href="#">Register Your Account</Link></li>
-                <li><Link href="#">Solutions</Link></li>
-                <li><Link href="#">Help</Link></li>
-              </ul>
-            </div>
+    return (
+        <>
+            <footer className="footerSec">
+                <div className="container">
+                    <div className="ftrItms">
+                        <div className="ftrLogo">
+                            <Link href="#"><Image width={180} height={186} src="/img/ftr-logo-1.png" alt="Logo-1" />
+                                <Image width={280} height={58} src="/img/ftr-logo-2.png" alt="Logo-1" /></Link>
+                        </div>
+                        <div className="ftrMenu">
+                    <strong className="ftrHead">Quick Links</strong>
+                    <ul>
+                        <li><Link href="#">Home</Link></li>
+                        <li><Link href="#">Products</Link></li>
+                        <li><Link href="#">Industries</Link></li>
+                        <li><Link href="#">Blog</Link></li>
+                        <li><Link href="#">Grants</Link></li>
+                        <li><Link href="#">Contact</Link></li>
+                    </ul>
+                </div>  
+                <div className="ftrAdrs">
+                    <strong className="ftrHead">Address</strong>
+                    <ul>
+                        <li><Image width={20} height={20} src="/img/ftr-icon-1.png" alt="Icons" />
+                            <Link href="tel:(888) 205-4036"><strong> Office:</strong> <br/>(888) 205-4036</Link>
+                        </li>
 
-            <div className='ut-col-5'>
-              <h3>CONNECT WITH US</h3>
-              <div className='iconlist'>
-                <Image src="/img/pin.png" alt="Better Stack" width={22} height={26} />
-                <div className='text'>120 WOODSTREAM BLVD #12, WOODBRIDGE, ON L4L 7Z1</div>
-              </div>
-              <div className='iconlist'>
-                <Image src="/img/call.png" alt="Better Stack" width={23} height={24} />
-                <div className='text'><b>Head Office</b><br/>+1 888 205 4036</div>
-              </div>
-              <div className='iconlist'>
-                <Image src="/img/mail.png" alt="Better Stack" width={22} height={26} />
-                <div className='text'><b>Email us</b><br/>admin@utsgroup.ca</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className='bottom-footer'>
-              <ul>
-                <li><a href="#"><Image src="/img/fb.png" alt="Facebo0k" width={33} height={32} /></a></li>
-                <li><a href="#"><Image src="/img/tw.png" alt="Twitter" width={33} height={32} /></a></li>
-                <li><a href="#"><Image src="/img/lk.png" alt="Linkedin" width={33} height={32} /></a></li>
-                <li><a href="#"><Image src="/img/ig.png" alt="Instagram" width={33} height={32} /></a></li>
-                <li><a href="#"><Image src="/img/yt.png" alt="Youtube" width={33} height={32} /></a></li>
-              </ul>
-        </div>
-      </div>
-    </>
-  )
+                        <li><Image width={20} height={20} src="/img/ftr-icon-2.png" alt="Icons" />
+                            <Link href="tel:647-922-5625"><strong>Mobile:</strong> <br/>647-922-5625</Link>
+                        </li>
+
+                        <li><Image width={20} height={20} src="/img/ftr-icon-3.png" alt="Icons" />
+                            <span><strong>Mailing Address:</strong> <br/>
+                                35 Cheltenham Ave, <br/> Woodbridge, ON., <br/> L4L 1K6
+                                Office Address:</span>
+                        </li>
+                        <li><Image width={20} height={20} src="/img/ftr-icon-4.png" alt="Icons" />
+                            <span><strong>Office Address:</strong> <br/>
+                                120 Woodstream Blvd,<br/> Unit-12, Woodbridge ON., <br/> L4L 7Z1</span>
+                        </li>
+
+                        <li><Image width={20} height={20} src="/img/ftr-icon-5.png" alt="Icons" />
+                            <Link href="www.utsgroup.ca"><strong>www.utsgroup.ca</strong></Link>
+                        </li>
+
+                    </ul>
+                </div>                                      
+                    </div>
+                </div>
+            </footer>
+        </>
+    )
 }

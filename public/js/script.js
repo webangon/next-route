@@ -73,29 +73,29 @@ if (portfolio_carousel != null) {
 }
 
 
-document.body.classList.remove('sidebar-open')
-var body = document.querySelector('body')
-document.querySelector('.side-close').onclick = function () {
-    body.classList.remove('sidebar-open')
-}
+// document.body.classList.remove('sidebar-open')
+// var body = document.querySelector('body')
+// document.querySelector('.side-close').onclick = function () {
+//     body.classList.remove('sidebar-open')
+// }
 
-document.querySelector('.mobile-tap').onclick = function () {
-    body.classList.add('sidebar-open')
-}
+// document.querySelector('.mobile-tap').onclick = function () {
+//     body.classList.add('sidebar-open')
+// }
 
-document.querySelector('.menu .plus').onclick = function () {
-    this.parentNode.nextSibling.classList.toggle('show-sub')
-}
+// document.querySelector('.menu .plus').onclick = function () {
+//     this.parentNode.nextSibling.classList.toggle('show-sub')
+// }
 
-var mobile_expand = document.querySelectorAll('.mobile-navigation .is-parent')
+// var mobile_expand = document.querySelectorAll('.mobile-navigation .is-parent')
 
-mobile_expand.forEach((item, index) => {
-    let _parent = item.querySelector(".plus");
-    _parent.onclick = function () {
-        this.parentNode.nextSibling.classList.toggle('show-sub')
-    }
+// mobile_expand.forEach((item, index) => {
+//     let _parent = item.querySelector(".plus");
+//     _parent.onclick = function () {
+//         this.parentNode.nextSibling.classList.toggle('show-sub')
+//     }
 
-})
+// })
 
 //******* */
 
@@ -111,6 +111,19 @@ if (next_post != null) {
   }
 }
 
+window.onscroll = function () {
+  var header = document.querySelector("header");
+  if (window.pageYOffset > 0) {
+      header.classList.add("sticky");
+  } else {
+      header.classList.remove("sticky");
+  }
+};
+
+
+document.querySelector('.menuBtn').onclick = function () {
+  this.parentNode.parentNode.classList.toggle('showMenu')
+}
 
 var sliderItems = document.querySelector('.sliderItems')
 if (sliderItems != null) {
