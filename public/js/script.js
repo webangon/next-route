@@ -73,6 +73,23 @@ if (portfolio_carousel != null) {
 }
 
 
+var video_slide = document.querySelector('#splide-clients')
+
+if (video_slide != null) {
+    var sd = new Splide('#splide-clients', {
+        perPage: 6,
+        gap         : 30,
+        rewind      : true,
+        pagination  : false,
+        isNavigation: true,        
+        breakpoints: {
+          640: {
+            perPage: 2,
+          },
+        },
+      }).mount(); 
+} 
+
 // document.body.classList.remove('sidebar-open')
 // var body = document.querySelector('body')
 // document.querySelector('.side-close').onclick = function () {
