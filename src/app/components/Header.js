@@ -325,6 +325,7 @@ export default function Header() {
     </header>
       <Script src="/js/splide.min.js"></Script>
       <Script src="/js/glightbox.js"></Script>
+      <Script src="/js/lottie-player.js"></Script>
       <link href="/css/glightbox.css" rel="stylesheet"></link>
       <link href="/css/splide.min.css" rel="stylesheet"></link>      
     </>

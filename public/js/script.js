@@ -33,16 +33,21 @@ if (sync_slide != null) {
   } );
 
   var thumbnails = new Splide( '#uts-sync-carousel', {
-    gap         : 30,
+    gap         : 20,
     rewind      : true,
     pagination  : false,
-    perPage    : 4,
+    perPage    : 7,
     isNavigation: true,
+    focus: 'center',
     breakpoints : {
       600: {
         perPage: 2,
       },
     },
+    classes: {
+      prev  : 'splide__arrow--prev',
+      next  : 'splide__arrow--next',
+},      
   } );
 
   main.sync( thumbnails );
@@ -80,7 +85,7 @@ if (video_slide != null) {
         perPage: 6,
         gap         : 30,
         rewind      : true,
-        pagination  : false,
+        pagination  : true,
         isNavigation: true,        
         breakpoints: {
           640: {
